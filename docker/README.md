@@ -12,7 +12,7 @@ tutorial](https://www.youtube.com/watch?v=K6WER0oI-qs)
 Take any image, create a container, then start the container
 docker run <image>
 
-Start a container
+### Start a container
 `docker start <name -or- id>`
 
 ### Stop a container
@@ -39,7 +39,7 @@ suggestion:  update hosts file to refer to docker vms
 ### Build a docker container
 Dockerfile example.  Tutorial has a nginx.conf file.
 
-`FROM ...` a base configuration
+`FROM ...` Import a base configuration template
 
 `RUN ...` shell commands to run when building the container
 
@@ -47,15 +47,10 @@ Dockerfile example.  Tutorial has a nginx.conf file.
 
 ```
 FROM nginx
-
 RUN mkdir /etc/nginx/logs && touch /etc/nginx/logs/static.log
-
 ADD .nginx.conf /etc/nginx/conf.d/default.conf
-
 ADD /src /www
-
 EXPOSE 80
-
 CMD nginx
 ```
 
