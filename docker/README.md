@@ -62,4 +62,13 @@ Place a file named Dockerfile in the target directory.
 
 `docker build -f /path/to/Dockerfile .`
 
+### Upload image
+Upload your image to a docker repository.
 
+`docker push <repo-name>/<image-name>`
+
+Once its pushed, on any other machine you can run it.
+
+From here you can log into your server and run your docker image.
+
+Docker image hosts can be docker.io or private for example.
