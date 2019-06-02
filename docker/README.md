@@ -1,10 +1,10 @@
 
 ## Basic commands
-Place a file named Dockerfile in the target directory.
-"." is recursively added to the docker container
--f /path is used to point to a filesystem
--t specifices a repo to store the docker image
-`docker build -f /path/to/Dockerfile .`
+Some notes from reading docker reference pages and this tutorial:
+
+[LearnCode.academy - Docker container
+tutorial](https://www.youtube.com/watch?v=K6WER0oI-qs)
+
 
 
 ## Docker runtime
@@ -37,4 +37,34 @@ suggestion:  update hosts file to refer to docker vms
 `docker run -d --name web1 -p 8080:80 tutum/hello-world`
 
 ### Build a docker container
+Dockerfile example.  Tutorial has a nginx.conf file.
+
+`FROM ...` a base configuration
+
+`RUN ...` shell commands to run when building the container
+
+`ADD ...` push a file or directory name 
+
+```
+FROM nginx
+
+RUN mkdir /etc/nginx/logs && touch /etc/nginx/logs/static.log
+
+ADD .nginx.conf /etc/nginx/conf.d/default.conf
+
+ADD /src /www
+
+EXPOSE 80
+
+CMD nginx
+```
+
+### Run the build script
+Place a file named Dockerfile in the target directory.
+"." is recursively added to the docker container
+-f /path is used to point to a filesystem
+-t specifices a repo to store the docker image
+
+`docker build -f /path/to/Dockerfile .`
+
 
