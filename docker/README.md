@@ -1,10 +1,10 @@
 
-
-# Place a file named Dockerfile in the target directory.
-# "." is recursively added to the docker container
-# -f /path is used to point to a filesystem
-# -t specifices a repo to store the docker image
-docker build -f /path/to/Dockerfile .
+#basic commands
+Place a file named Dockerfile in the target directory.
+"." is recursively added to the docker container
+-f /path is used to point to a filesystem
+-t specifices a repo to store the docker image
+`docker build -f /path/to/Dockerfile .`
 
 
 ## Docker runtime
