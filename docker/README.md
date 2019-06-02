@@ -1,5 +1,5 @@
 
-#basic commands
+# Basic commands
 Place a file named Dockerfile in the target directory.
 "." is recursively added to the docker container
 -f /path is used to point to a filesystem
