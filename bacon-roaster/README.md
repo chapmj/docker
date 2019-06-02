@@ -1,2 +1,0 @@
-# bacon-roaster
-Medical device
