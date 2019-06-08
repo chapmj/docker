@@ -72,3 +72,4 @@ Once its pushed, on any other machine you can run it.
 From here you can log into your server and run your docker image.
 
 Docker image hosts can be docker.io or private for example.
+
